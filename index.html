@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getkraft - Website Upgrade</title>
+
+    <!-- Material Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Material Icons -->
+    <!-- <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    /> -->
+
+    <style>
+      :root {
+        /* Material color roles */
+        --primary: #1e88e5; /* Blue */
+        --primary-container: #e3f2fd;
+        --secondary: #fb8c00; /* Orange */
+        --background: #f5f7fb;
+        --surface: #ffffff;
+        --on-primary: #ffffff;
+        --on-surface: #1f2937;
+        --outline: #e0e0e0;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        font-family: "Roboto", system-ui, sans-serif;
+        background:
+          radial-gradient(circle at top right, #e3f2fd, transparent 40%),
+          radial-gradient(circle at bottom left, #fff3e0, transparent 40%),
+          var(--background);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        color: var(--on-surface);
+      }
+
+      .card {
+        width: 100%;
+        max-width: 680px;
+        background: var(--surface);
+        border-radius: 28px;
+        padding: 3rem 2.5rem;
+        box-shadow:
+          0 4px 8px rgba(0, 0, 0, 0.05),
+          0 12px 28px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        animation: rise 0.6s ease forwards;
+      }
+
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .icon-wrap {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 1.5rem;
+        border-radius: 50%;
+        background: var(--primary-container);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        max-width: 540px;
+        margin: 0 auto 2rem;
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: #4b5563;
+      }
+
+      .actions {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* Material-style filled button */
+      .btn-filled {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.9rem 1.8rem;
+        font-size: 0.95rem;
+        font-weight: 500;
+        border-radius: 8px; /* ← Material rectangular shape */
+        background: var(--secondary);
+        color: var(--on-primary);
+        text-decoration: none;
+        box-shadow:
+          0 2px 4px rgba(0, 0, 0, 0.15),
+          0 6px 12px rgba(0, 0, 0, 0.12);
+        transition:
+          box-shadow 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .btn-filled:hover {
+        box-shadow:
+          0 4px 8px rgba(0, 0, 0, 0.2),
+          0 10px 20px rgba(0, 0, 0, 0.15);
+        transform: translateY(-1px);
+      }
+
+      .btn-filled:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+      }
+
+      footer {
+        margin-top: 2.5rem;
+        font-size: 0.85rem;
+        color: #6b7280;
+      }
+
+      footer a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 480px) {
+        .card {
+          padding: 2.2rem 1.8rem;
+        }
+        h1 {
+          font-size: 1.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <div class="icon-wrap">
+        <img
+          src="/assets/images/getkraftsvglogo.svg"
+          alt="Getkraft Logo"
+          style="width: 65px; height: 65px; border-radius: 5px"
+        />
+      </div>
+
+      <h1>We’re Upgrading Our Website</h1>
+
+      <p>
+        We’re improving performance, design, and features to give you a better
+        experience.
+        <!-- You can already preview our new website below. -->
+      </p>
+
+      <!-- <div class="actions">
+        <a
+          href="https://www.getkraftz.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-filled"
+        >
+          <span class="material-icons" style="font-size: 18px"
+            >open_in_new</span
+          >
+          Check out our new website
+        </a>
+      </div> -->
+
+      <footer>
+        For more information, contact us at
+        <a href="mailto:support@getkraft.com">support@getkraft.com</a>
+      </footer>
+    </main>
+  </body>
+</html>
